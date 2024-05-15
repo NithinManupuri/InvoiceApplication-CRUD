@@ -71,13 +71,8 @@ public class InvoiceService implements InvoiceInterface {
 
     @Override
     public List<InvoiceDetails> getAllInvoices(Integer userId) {
-       
-        UserEntity user = userRepo.findById(userId).orElse(null);
-    	if (user != null) {
-    	   return user.getInvoiceDetails();
-    	    
-    	}
-        return null;
+
+        return invoiceRepo.findAllByUserUserId(Integer userId);;
     }
 
     @Override
