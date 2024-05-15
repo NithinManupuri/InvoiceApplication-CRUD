@@ -8,6 +8,4 @@ import com.invoice.entity.InvoiceDetails;
 
 public interface InvoiceRepository extends JpaRepository<InvoiceDetails,Integer>{
 
-	
-	public  List<InvoiceDetails> findAllByUserUserId(Integer userId);
 }
